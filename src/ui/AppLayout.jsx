@@ -8,14 +8,14 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="layout">
+    <>
       {isLoading && <Loader />}
       <Header />
-      <main>
+      <main className="overflow-x-scroll sm:overflow-x-auto">
         <Outlet />
       </main>
       <CartOverview />
-    </div>
+    </>
   );
 }
 
